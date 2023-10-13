@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Visualisation 2 | draft</title>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+  <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google font -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+
+</head>
+
+<body>
+
+  <div class="page">
+
+    <header class="w3-container w3-center w3-padding-48 w3-white">
+      <h1>THE CHANGING FACE OF HIV AIDS</h1>
+      <h6>30 years ago a rare immuno-system virus was detected in 5 men in USA. 
+        By the following summer, the illness was spreading nationwide and had been given a name:
+        Acquired Immuno Deficiency Syndrome, or AIDS.
+        In the following decades, AIDS has claimed  <span class='deaths_text'>millions of lives around the world.</span>
+        Thankfully, with proper education and advanced medicine, recent trends suggest a decline in AIDS-related death rates.
+        But we've still got a long way left to go.</h6>
+    </header>
+
+     <!-- pure grid group -->
+     <div class="pure-g">
+      <div class="pure-u-1-3">
+        <div class="description description-left">
+          <h2>NEW CASES OF HIV AIDS</h2>
+          <p>Incidence of HIV, measured as the number of new cases per 1000 individuals of all ages, based on <span class='cases_text'>UNAIDS </span>
+            versus <span class='cases_text'>IHME, Global Burden of Disease estimates.</span>
+          </p>
+        </div>
+       
+      </div>
+      <div class="pure-u-2-3">
+        <div id="vis2" class="vis-container"></div>
+       
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-3">
+        <div class="description description-left">
+          <h2>Death rates are high across Sub-Saharan Africa</h2>
+          <p>In the interactive map, we see the distribution of death rates worldwide. 
+            Most countries have a rate of <span class='cases_text'>less than 10 deaths per 100,000,</span> often much lower, below 5 per 100,000. 
+            Across Europe, the death rate is less than one per 100,000.
+            Across Sub-Saharan Africa, the rates are much higher. 
+            Most countries in the South of the region had rates <span class='deaths_text'> greater than 100 per 100,000.</span></greater></p>
+        </div>
+       
+      </div>
+      <div class="pure-u-2-3">
+        <div id="vis4" class="vis-container"></div>
+       
+      </div>
+    </div>
+    <!-- end pure grid group -->
+    
+     <!-- pure grid group -->
+     <div class="pure-g">
+      <div class="pure-u-1-3">
+        <div class="description description-left">
+          <h2>HIV/AIDS once accounted for a large share of deaths in some countries, but rates are now falling</h2>
+          <p>Today the share of deaths remains high: <span class='deaths_text'> more than 1 in 5 deaths in some countries</span>  are caused by HIV/AIDS. 
+            But in the past, this share was even higher.</p>
+        </div>
+       
+      </div>
+      <div class="pure-u-2-3">
+        <div id="vis3" class="vis-container"></div>
+       
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-3">
+        <div class="description description-left">
+          <h2>HIV/AIDS is particulary deadly within younger demographics</h2>
+          <p>Although the death count has declined with time, younger populations, particularly aged within <span class= 'age_text'>15 to 49 years </span>are more susceptible to the virus. </p>
+        </div>
+       
+      </div>
+      <div class="pure-u-2-3">
+        <div id="vis1" class="vis-container"></div>
+       
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <h1>Gender and Racial disparity in AIDS deaths in the United States</h1>
+
+     <!-- pure grid group -->
+     <div class="pure-g">
+      <div class="pure-u-1-3">
+        <div class="description description-left">
+          <h2>In the United States, some racial/ethnic groups are more affected than others</h2>
+          <p>This is because some population groups have higher rates of HIV in their communities, thus raising the risk of new infections with each sexual or injection drug use encounter. </p>
+        </div>
+       
+      </div>
+      <div class="pure-u-2-3">
+        <div id="vis5" class="vis-container"></div>
+       
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+     <!-- pure grid group -->
+     <div class="pure-g">
+      <div class="pure-u-1-3">
+        <div class="description description-left">
+          <h2>More men tend to die from AIDS every year than women</h2>
+          <p>The reasons for differences in death rates include:
+            <ul>
+              <li><p>Starting treatment at later stages of disease progression</p></li>
+              <li><p>Worse adherance to treatment follow ups compared to female counterparts</p></li>
+            </ul>
+          </p>
+        </div>
+       
+      </div>
+      <div class="pure-u-2-3">
+        <div id="vis6" class="vis-container"></div>
+       
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+
+  </div> <!-- end page -->
+
+  <script type="text/javascript">
+    var specVis1 = "./js/tooltip_chart.vg.json";
+    var specVis2 = "./js/aids_scatter_plot.vg.json";
+    var specVis3 = "./js/line_chart.vg.json";
+    var specVis4 = "./js/tester.vg.json";
+    var specVis5 = "./js/isotype.vg.json";
+    var specVis6 = "./js/diverging_bar.vg.json";
+
+
+    vegaEmbed('#vis1', specVis1, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis3', specVis3, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis4', specVis4, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis5', specVis5, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis6', specVis6, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+  </script>
+</body>
+
+</html>
