@@ -1,0 +1,84 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "data/cases_deaths_2019.csv"
+    },
+    "title": "Prevalence, new cases and deaths from HIV/AIDS, Global (1990 to 2019)",
+    "width": 700,
+    "height": 300,
+    "layer": [
+      {
+        "encoding": {
+          "x": {"field": "Year", "type": "temporal"},
+          "y": {"field": "Count", "type": "quantitative"},
+          "color": {
+            "field": "Measure", "type": "nominal", 
+            "scale": {
+                "domain": ["Current number of cases", "Deaths", "New number of cases"], 
+                "range": ["#0c43cf", "#8c0e25","#404141"]}
+              }
+        },
+        "layer": [
+          {"mark": "line"},
+          {
+            "params": [{
+              "name": "label",
+              "select": {
+                "type": "point",
+                "encodings": ["x"],
+                "nearest": true,
+                "on": "mouseover"
+              }
+            }],
+            "mark": "point",
+            "encoding": {
+              "opacity": {
+                "condition": {
+                  "param": "label",
+                  "empty": false,
+                  "value": 1
+                },
+                "value": 0
+              }
+            }
+          }
+        ]
+      },
+      {
+        "transform": [{"filter": {"param": "label", "empty": false}}],
+        "layer": [
+          {
+            "mark": {"type": "rule", "color": "gray"},
+            "encoding": {
+              "x": {"type": "temporal", "field": "date", "aggregate": "min"}
+            }
+          },
+          {
+            "encoding": {
+              "text": {"type": "quantitative", "field": "Count"},
+              "x": {"type": "temporal", "field": "Year", "title": "Year"},
+              "y": {"type": "quantitative", "field": "Count"}
+            },
+            "layer": [
+              {
+                "mark": {
+                  "type": "text",
+                  "stroke": "white",
+                  "strokeWidth": 2,
+                  "align": "left",
+                  "dx": 5,
+                  "dy": -5
+                }
+              },
+              {
+                "mark": {"type": "text", "align": "left", "dx": 5, "dy": -5},
+                "encoding": {
+                  "color": {"type": "nominal", "field": "Measure"}
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
