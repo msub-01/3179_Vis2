@@ -5,7 +5,8 @@ body *{
 h1 {
     font-family: "Oswald";
     font-weight: 900;
-    text-align: center;
+    font-size: 80px;
+    text-align: left;
     color: #d13141;
     padding-bottom: 50px;
 }
@@ -51,23 +52,54 @@ h1 {
 }
 
 .cases_text {
-    color: #2590c8;
+    color: #b88c5e;
     font-family: "Oswald";
 }
 
 .age_text {
-    color: rgb(136, 136, 136);
+    color: #71706f;
     font-family: "Oswald";
 }
 
 .deaths_text {
+    color: #820909;
+    font-family: "Oswald";
+}
+
+.aids_text {
     color: #d13141;
     font-family: "Oswald";
 }
 
+.male_text {
+    color: #1689ba;
+    font-family: "Oswald";
+}
+
+.new_text {
+    color: #ed4edb;
+    font-family: "Oswald";
+}
+
+.current_text {
+    color: #0c43cf;
+    font-family: "Oswald";
+}
+
+h3 {
+    font-family: "Oswald";
+    font-weight: 400;
+    font-size: 40px;
+}
+
 h2 {
     font-family: "Oswald";
-    font-weight: 600;
+    font-weight: 400;
+    font-size: 50px;
+    font-weight: 900;
+    text-align: left;
+    color: #d13141;
+    padding-bottom: 50px;
 }
 
 h6 {
@@ -77,5 +109,5 @@ h6 {
 p {
     font-family: "Oswald";
     font-weight: 20;
-    font-size: larger;
+    font-size: 20px;
 }
