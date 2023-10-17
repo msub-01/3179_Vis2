@@ -3,22 +3,51 @@
     "data": {
       "url": "data/cases_deaths_2019.csv"
     },
-    "title": "Prevalence, new cases and deaths from HIV/AIDS, Global (1990 to 2019)",
-    "width": 700,
+    "title": "Global Prevalence, New cases and Deaths from HIV-AIDS (1990 to 2019)",
+    "width": 1000,
     "height": 300,
     "layer": [
+      {
+        "mark": "rect",
+        "data": {
+          "values": [
+            {
+              "start": "2004",
+              "end": "2006",
+              "event": "Nazi Rule"
+            },
+            {
+              "start": "2008",
+              "end": "2010",
+              "event": "GDR (East Germany)"
+            }
+          ]
+        },
+        "encoding": {
+          "x": {
+            "field": "start",
+            "timeUnit": "year"
+          },
+          "x2": {
+            "field": "end",
+            "timeUnit": "year"
+          },
+          "color": {"field": "event", "type": "nominal"}
+        }
+      },
       {
         "encoding": {
           "x": {"field": "Year", "type": "temporal"},
           "y": {"field": "Count", "type": "quantitative"},
           "color": {
-            "field": "Measure", "type": "nominal", 
+            "field": "Measure", "type": "nominal", "title": "Measure",
             "scale": {
                 "domain": ["Current number of cases", "Deaths", "New number of cases"], 
-                "range": ["#0c43cf", "#8c0e25","#404141"]}
+                "range": ["#0c43cf", "#8c0e25","#ed4edb"]}
               }
         },
         "layer": [
+          
           {"mark": "line"},
           {
             "params": [{

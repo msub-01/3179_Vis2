@@ -31,7 +31,7 @@
           "value": 0.2
         },
         "tooltip": [
-          {"field": "Year", "type": "nominal", "title": "Year"},
+          {"field": "Year", "type": "ordinal", "title": "Year"},
           {"field": "over_70", "type": "nominal", "title": "Over 70 years"},
           {"field": "50_69", "type": "nominal", "title": "50 to 69 years"},
           {"field": "15_49", "type": "nominal", "title": "15 to 49 years"},

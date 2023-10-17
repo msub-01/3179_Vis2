@@ -15,12 +15,11 @@
         {"Ethnicity": "Hispanic", "Percentage_with_HIV": 24.7},
         {"Ethnicity": "Hispanic", "Percentage_with_HIV": 24.7},
         {"Ethnicity": "Asian", "Percentage_with_HIV": 1.5},
-        {"Ethnicity": "Asian", "Percentage_with_HIV": 1.5},
         {"Ethnicity": "American Indian", "Percentage_with_HIV": 0.3},
         {"Ethnicity": "Native Hawaiian and Other", "Percentage_with_HIV": 0.09}
       ]
     },
-    "title": "HIV/AIDS related deaths by ethnicity in the US (2019)",
+    "title": "HIV-AIDS related deaths by ethnicity in the US (2019)",
     "transform": [
       {
         "calculate": "{'African American': '​🧑🏾‍🦱', 'White': '🧑🏻‍🦰', 'Hispanic': '👩🏻‍🦱​', 'Asian': ' ​👩🏻', 'American Indian': '👨🏽‍🦱', 'Native Hawaiian and Other': '​​👩🏽‍🦱​​'}[datum.Ethnicity]",

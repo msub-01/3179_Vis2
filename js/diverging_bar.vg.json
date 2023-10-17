@@ -63,7 +63,12 @@
         "field": "gender",
         "scale": {"range": ["#6e6c69", "#ca8861"]},
         "legend": {"orient": "top", "title": null}
-      }
+      },
+        "tooltip": [
+          {"field": "Year", "type": "nominal", "title": "Year"},
+          {"field": "gender", "type": "nominal", "title": "Gender"},
+          {"field": "Deaths", "type": "quantitative", "title": "Deaths per 100,000 resident population"}
+        ]
     },
     "config": {
       "view": {"stroke": null},
